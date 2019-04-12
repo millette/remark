@@ -1,6 +1,5 @@
 'use strict'
 
-var trim = require('trim')
 var whitespace = require('is-whitespace-character')
 var locate = require('../locate/strong')
 
@@ -54,7 +53,7 @@ function strong(eat, value, silent) {
       character = value.charAt(index + 2)
 
       if (character !== marker) {
-        if (!trim(queue)) {
+        if (!queue.trim()) {
           return
         }
 

@@ -2,7 +2,6 @@
 
 /* eslint-disable max-params */
 
-var trim = require('trim')
 var repeat = require('repeat-string')
 var decimal = require('is-decimal')
 var getIndent = require('../util/get-indentation')
@@ -265,7 +264,7 @@ function list(eat, value, silent) {
     }
 
     prevEmpty = empty
-    empty = !prefixed && !trim(content).length
+    empty = !prefixed && !content.trim().length
 
     if (indented && item) {
       item.value = item.value.concat(emptyLines, line)

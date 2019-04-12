@@ -1,6 +1,5 @@
 'use strict'
 
-var trim = require('trim')
 var word = require('is-word-character')
 var whitespace = require('is-whitespace-character')
 var locate = require('../locate/emphasis')
@@ -48,7 +47,7 @@ function emphasis(eat, value, silent) {
       character = value.charAt(++index)
 
       if (character !== marker) {
-        if (!trim(queue) || prev === marker) {
+        if (!queue.trim() || prev === marker) {
           return
         }
 

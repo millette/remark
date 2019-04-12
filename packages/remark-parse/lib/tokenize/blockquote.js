@@ -1,6 +1,5 @@
 'use strict'
 
-var trim = require('trim')
 var interrupt = require('../util/interrupt')
 
 module.exports = blockquote
@@ -84,7 +83,7 @@ function blockquote(eat, value, silent) {
 
     content = value.slice(index, nextIndex)
 
-    if (!prefixed && !trim(content)) {
+    if (!prefixed && !content.trim()) {
       index = startIndex
       break
     }

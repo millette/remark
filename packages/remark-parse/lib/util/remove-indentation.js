@@ -1,6 +1,5 @@
 'use strict'
 
-var trim = require('trim')
 var repeat = require('repeat-string')
 var getIndent = require('./get-indentation')
 
@@ -30,7 +29,7 @@ function indentation(value, maximum) {
 
     matrix[position] = indentation.stops
 
-    if (trim(values[position]).length === 0) {
+    if (values[position].trim().length === 0) {
       continue
     }
 
@@ -57,7 +56,7 @@ function indentation(value, maximum) {
       }
 
       if (
-        trim(values[position]).length !== 0 &&
+        values[position].trim().length !== 0 &&
         minIndent &&
         index !== minIndent
       ) {
